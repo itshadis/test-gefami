@@ -1,7 +1,7 @@
-import SoalNo1 from "../../components/pseudo_code/SoalNo1";
-import SoalNo2 from "../../components/pseudo_code/SoalNo2";
-import SoalNo3 from "../../components/pseudo_code/SoalNo3";
-import SoalNo4 from "../../components/pseudo_code/SoalNo4";
+import SoalNo1 from "./components/SoalNo1";
+import SoalNo2 from "./components/SoalNo2";
+import SoalNo3 from "./components/SoalNo3";
+import SoalNo4 from "./components/SoalNo4";
 
 export default function SoalPseudoCode() {
 

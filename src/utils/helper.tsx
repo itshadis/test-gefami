@@ -96,3 +96,23 @@ export function terbilang(x: number): string {
 
   return result.trim();
 }
+
+
+// HELPER SOAL UTAMA
+// HELPER SOAL NO 7
+import crypto from 'crypto-js'
+
+export function encrypt(date: string, name: string): string {
+  const inputString = `${date}${name}priaifabula`
+  const hash = crypto.SHA256(inputString).toString(crypto.enc.Base64)
+
+  return hash
+}
+
+export function formatDate(date: Date): string {
+  const getDay = date.getDate().toString().padStart(2, '0');
+  const getMonth = (date.getMonth() + 1).toString().padStart(2, '0');
+  const getYear = date.getFullYear().toString();
+
+  return `${getDay}${getMonth}${getYear}`;
+}

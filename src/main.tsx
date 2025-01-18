@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Layout from './pages/layouts'
+import Layout from './layouts'
 import SoalPseudoCode from './pages/pseudo_code'
 import SoalUtama from './pages/soal_utama'
 import './index.css'

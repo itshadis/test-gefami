@@ -1,43 +1,68 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Tabs } from 'antd';
 import type { TabsProps } from 'antd';
-import SoalNo1_2 from './components/SoalNo1_2';
-import SoalNo3_6 from './components/SoalNo3_5';
-import SoalNo7 from './components/SoalNo7';
-import SoalNo8 from './components/SoalNo8';
-import SoalNo9 from './components/SoalNo9';
-import SoalNo10_11 from './components/SoalNo10_11';
+
+const SoalNo1_2 = lazy(() => import('./components/SoalNo1_2'));
+const SoalNo3_6 = lazy(() => import('./components/SoalNo3_5'));
+const SoalNo7 = lazy(() => import('./components/SoalNo7'));
+const SoalNo8 = lazy(() => import('./components/SoalNo8'));
+const SoalNo9 = lazy(() => import('./components/SoalNo9'));
+const SoalNo10_11 = lazy(() => import('./components/SoalNo10_11'));
 
 const items: TabsProps['items'] = [
   {
     key: '1',
     label: 'Soal No 1 - 2',
-    children: <SoalNo1_2 /> ,
+    children: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <SoalNo1_2 />
+      </Suspense>
+    )
   },
   {
     key: '2',
     label: 'Soal No 3 - 6',
-    children: <SoalNo3_6 />,
+    children: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <SoalNo3_6 />
+      </Suspense>
+    )
   },
   {
     key: '3',
     label: 'Soal No 7',
-    children: <SoalNo7 />,
+    children: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <SoalNo7 />
+      </Suspense>
+    )
   },
   {
     key: '4',
     label: 'Soal No 8',
-    children: <SoalNo8 />,
+    children: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <SoalNo8 />
+      </Suspense>
+    )
   },
   {
     key: '5',
     label: 'Soal No 9',
-    children: <SoalNo9 />,
+    children: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <SoalNo9 />
+      </Suspense>
+    )
   },
   {
     key: '6',
     label: 'Soal No 10 - 11',
-    children: <SoalNo10_11 />,
+    children: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <SoalNo10_11 />
+      </Suspense>
+    )
   },
 ];
 

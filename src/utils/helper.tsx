@@ -1,46 +1,46 @@
 // HELPER SOAL NO 1
 export function labelOfNumbers(): void {
   for (let i = 50; i <= 100; i += 5) {
-    let desc: string;
+    let desc: string
 
     if (i <= 60) {
-      desc = "KURANG";
+      desc = "KURANG"
     } else if (i > 60 && i <= 70) {
-      desc = "CUKUP";
+      desc = "CUKUP"
     } else if (i > 70 && i <= 80) {
-      desc = "BAIK";
+      desc = "BAIK"
     } else {
-      desc = "LUAR BIASA";
+      desc = "LUAR BIASA"
     }
 
-    console.log(`${i} - ${desc}`);
+    console.log(`${i} - ${desc}`)
   }
 }
 
 
 // HELPER SOAL NO 2
 export function generateFibonacci(n: number): void {
-  const fibonacci: number[] = [];
+  const fibonacci: number[] = []
 
   for (let i = 0; i < n; i++) {
     if (i === 0) {
-      fibonacci.push(0);
+      fibonacci.push(0)
     } else if (i === 1) {
-      fibonacci.push(1);
+      fibonacci.push(1)
     } else {
-      const nextNumber = fibonacci[i - 1] + fibonacci[i - 2];
-      fibonacci.push(nextNumber);
+      const nextNumber = fibonacci[i - 1] + fibonacci[i - 2]
+      fibonacci.push(nextNumber)
     }
   }
 
-  console.log(fibonacci.join(" "));
+  console.log(fibonacci.join(" "))
 }
 
 
 // HELPER SOAL NO 3
 export function createStar(totalLine: number):void {
   for (let i = 1; i <= totalLine; i++) {
-    let stars = "";
+    let stars = ""
     for (let j = 1; j <= i; j++) {
       stars += "* "; // Menambahkan satu bintang dan spasi
     }
@@ -61,40 +61,40 @@ export function terbilang(x: number): string {
     throw new Error('Angka harus lebih besar dari 2000 dan kurang dari 10000');
   }
 
-  let result = '';
+  let result = ''
 
   // Proses ribuan
-  const ribuan = Math.floor(x / 1000);
+  const ribuan = Math.floor(x / 1000)
   if (ribuan > 0) {
-    result += ANGKA_DALAM_HURUF[ribuan] + ' Ribu';
-    x %= 1000;
+    result += ANGKA_DALAM_HURUF[ribuan] + ' Ribu'
+    x %= 1000
   }
   
   // Proses ratusan
-  const ratusan = Math.floor(x / 100);
+  const ratusan = Math.floor(x / 100)
   if (ratusan === 1) {
     result += ' ' + ANGKA_DALAM_HURUF[ratusan + 19]
-    x %= 100;
+    x %= 100
   } else if (ratusan > 0) {
-    result += ' ' + ANGKA_DALAM_HURUF[ratusan] + ' Ratus';
-    x %= 100;
+    result += ' ' + ANGKA_DALAM_HURUF[ratusan] + ' Ratus'
+    x %= 100
   }
   
   // Proses puluhan
-  const puluhan = Math.floor(x / 10);
+  const puluhan = Math.floor(x / 10)
   if (puluhan > 1) {
-    result += ' ' + ANGKA_DALAM_HURUF[puluhan] + ' Puluh';
-    x %= 10;
+    result += ' ' + ANGKA_DALAM_HURUF[puluhan] + ' Puluh'
+    x %= 10
   } else if (puluhan === 1) {
-    return result += ' ' + ANGKA_DALAM_HURUF[x];
+    return result += ' ' + ANGKA_DALAM_HURUF[x]
   }
   
   // Proses satuan
   if (x > 0) {
-    result += ' ' + ANGKA_DALAM_HURUF[x];
+    result += ' ' + ANGKA_DALAM_HURUF[x]
   }
 
-  return result.trim();
+  return result.trim()
 }
 
 
@@ -110,9 +110,9 @@ export function encrypt(date: string, name: string): string {
 }
 
 export function formatDate(date: Date): string {
-  const getDay = date.getDate().toString().padStart(2, '0');
-  const getMonth = (date.getMonth() + 1).toString().padStart(2, '0');
-  const getYear = date.getFullYear().toString();
+  const getDay = date.getDate().toString().padStart(2, '0')
+  const getMonth = (date.getMonth() + 1).toString().padStart(2, '0')
+  const getYear = date.getFullYear().toString()
 
-  return `${getDay}${getMonth}${getYear}`;
+  return `${getDay}${getMonth}${getYear}`
 }

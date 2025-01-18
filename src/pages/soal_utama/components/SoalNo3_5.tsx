@@ -29,7 +29,7 @@ export default function SoalNo3_6() {
           key: item.id, // Use 'id' as the key and convert it to a string
         }));
 
-        setDatas(dataWithKeys);
+        setDatas(dataWithKeys)
       } catch (error) {
         if(error instanceof Error) {
           throw new Error(error.message)
@@ -63,7 +63,7 @@ export default function SoalNo3_6() {
   ]
 
   function handleDelete(record: DataType): void {
-    setDatas((prev) => prev.filter((item) => item.key !== record.key));
+    setDatas((prev) => prev.filter((item) => item.key !== record.key))
   }
 
   return (

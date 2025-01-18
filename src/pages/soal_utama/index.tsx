@@ -6,6 +6,7 @@ import SoalNo3_6 from './components/SoalNo3_5';
 import SoalNo7 from './components/SoalNo7';
 import SoalNo8 from './components/SoalNo8';
 import SoalNo9 from './components/SoalNo9';
+import SoalNo10_11 from './components/SoalNo10_11';
 
 const items: TabsProps['items'] = [
   {
@@ -32,6 +33,11 @@ const items: TabsProps['items'] = [
     key: '5',
     label: 'Soal No 9',
     children: <SoalNo9 />,
+  },
+  {
+    key: '6',
+    label: 'Soal No 10 - 11',
+    children: <SoalNo10_11 />,
   },
 ];
 

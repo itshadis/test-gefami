@@ -36,10 +36,10 @@ import { useState } from 'react'
 import Button from '../../../components/Button'
 
 type Siswa = {
-  nama: string,
-  jenis_kelamin: string,
-  kelas: string,
-  alamat: string,
+  nama: string;
+  jenis_kelamin: string;
+  kelas: string;
+  alamat: string;
 }
 
 export default function SoalNo1_2() {

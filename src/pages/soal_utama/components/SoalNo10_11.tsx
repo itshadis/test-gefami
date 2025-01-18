@@ -1,6 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import Swal from "sweetalert2";
 import Button from "../../../components/Button";
+import { useState } from "react";
 
 export default function SoalNo10_11() {
 
@@ -19,8 +20,10 @@ export default function SoalNo10_11() {
 }
 
 function SoalNo10() {
+  const [loading, setLoading] = useState<boolean>(false)
 
   async function handleGetAPI() {
+    setLoading(true)
     try {
       const response: Response = await fetch('http://localhost:3000/api/data', {
         headers: {
@@ -42,16 +45,21 @@ function SoalNo10() {
           text: error.message
         })
       }
+    } finally {
+      setLoading(false)
     }
   }
+
   return (
-    <Button onClick={handleGetAPI} text="Request GET" />
+    <Button onClick={handleGetAPI} text="Request GET" disabled={loading} />
   )
 }
 
 function SoalNo11() {
+  const [loading, setLoading] = useState<boolean>(false)
 
   async function handlePostAPI() {
+    setLoading(true)
     try {
       const data = {
         userId: 1,
@@ -84,10 +92,12 @@ function SoalNo11() {
           text: error.message
         })
       }
+    } finally {
+      setLoading(false)
     }
   }
 
   return (
-    <Button onClick={handlePostAPI} text="Request POST" />
+    <Button onClick={handlePostAPI} text="Request POST" disabled={loading}/>
   )
 }

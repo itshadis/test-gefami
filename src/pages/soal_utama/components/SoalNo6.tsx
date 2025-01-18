@@ -14,9 +14,11 @@ interface DataProps {
 
 export default function SoalNo6({ data }: DataProps) {
   function handleClick(): void {
+    console.log("Sebelum Dihapus", data);
+    
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const newData = data.map(({ key, ...rest }: DataType ) => rest)
-    console.log(newData);
+    console.log("Setelah Dihapus", newData);
     
   }
 
